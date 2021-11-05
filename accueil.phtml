@@ -29,7 +29,7 @@
               <td><?= $row['id']; ?></td>
               <td><?= $row['nom_produit']; ?></td>
               <td><?= $row['prix']; ?></td>
-              <td><a href="#"><i class="fas fa-edit"></i></a> <a href="#"><i class="fas fa-trash-alt"></i></a></td>
+              <td><a href="edit.php?id=<?= $row['id'] ?>"><i class="fas fa-edit"></i></a> <a href="delete.php?id=<?= $row['id'] ?>"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
           <?php endforeach; ?>
             <!-- <tr>
@@ -39,7 +39,7 @@
             </tr> -->
           </tbody>
       </table>
-      <a href="connexion.php">Retour</a>
+      <a href="connexion.html">Retour</a>
     </form>
 </body>
 </html>
