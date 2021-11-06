@@ -17,13 +17,16 @@
                 <form action="edit.php" method="post">
                         <h1>Modifier un nouveau produit</h1>
                         <div>
-                        <input type="text" placeholder="Produit" name="produit" id="username" />
+                                <input type="hidden" name="id" value="<?= $id ?>"/>
                         </div>
                         <div>
-                                <input type="text" placeholder="Prix" name="prix" id="username"/>
+                                <input type="text" placeholder="Produit" name="produit" id="username" value="<?= $prod?>"/>
                         </div>
                         <div>
-                                <input type="submit" name="bouton" value="Créer un produit"/>
+                                <input type="text" placeholder="Prix" name="prix" id="username" value="<?= $price?>"/>
+                        </div>
+                        <div>
+                                <input type="submit" name="bouton" value="Modifier produit"/>
                                 <a href="accueil.php">Accueil</a>
                         </div>
                 </form>
