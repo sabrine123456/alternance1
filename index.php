@@ -15,6 +15,10 @@ include 'db-connect.php';
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
     $count = mysqli_num_rows($result); 
     if($count == 0){  
+        if (($row) && ($email == ''))
+        { 
+            echo '<p> utilisateur existant </p>';
+        }
         $req = $con->prepare("INSERT INTO `inscription`(`firstName`, `lastName`, `email`, `password`) VALUES ('$nom', '$prenom', '$email1', '$password')");
         $req->execute();
         header('Location: connexion.html');
@@ -23,5 +27,6 @@ include 'db-connect.php';
         header("Location: formulaire.html");
         echo "<h1> Vérifier votre email ou mot de passe .</h1>";  
     } 
+  
 include 'formulaire.html';
 ?>
