@@ -1,5 +1,6 @@
 <?php
 include 'db-connect.php';  
+include 'deconnexion.html';
 include 'creer.html';
 
 // créer un nouveau produit
